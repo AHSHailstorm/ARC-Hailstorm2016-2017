@@ -1,4 +1,11 @@
-package org.firstinspires.ftc.teamcode.a;
+package org.firstinspires.ftc.teamcode;
+
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorController;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
+
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
@@ -18,7 +25,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
  */
 @Autonomous(name="Basic Linear Autonomous", group="Autonomous")
 
-public class ARC_hailStorm2016_2017 extends LinearOpMode {
+public class RedTeamAuto extends LinearOpMode {
         /* Note:
      * When you extend OpMode, you must declare the methods init() and loop()
      */
@@ -60,10 +67,9 @@ public class ARC_hailStorm2016_2017 extends LinearOpMode {
 
         waitForStart();
 
-        MoveForward(0.5, 2000/*milliseconds*/);
-        MoveLeft(0.5, 2000);
-        MoveRight(.5,2000);
-        MoveBack(.5,2000);
+        MoveForward(1, 2628/*milliseconds*/);
+        MoveLeft(1, 0617);
+        MoveForward(1,2250);
 
 
     }
@@ -87,15 +93,14 @@ public class ARC_hailStorm2016_2017 extends LinearOpMode {
         motor4.setPower(-power);        //right Side motor reverse
         motor1.setPower(power);         //left side motor foward
         motor3.setPower(power);         //left side motor foward
-          
+
     }
     public void MoveBack (double power, long time) throws InterruptedException {
-        motor1.setPower(-power);           //left side motor reverse 
+        motor1.setPower(-power);           //left side motor reverse
         motor2.setPower(-power);           //right Side motor reverse
         motor3.setPower(-power);           //left side motor reverse
         motor4.setPower(-power);           //right Side motor reverse
     }
-}
 
 
 }
